@@ -21,9 +21,8 @@ You will need ...:
 * [PlatformIO](http://platformio.org) extension for [VSCode](https://code.visualstudio.com/)
 
 ## Contributing || Underconstruction
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## What is there to improve
+### What is there to be improved
 * Overall code base in terms of speed
 
 ## Authors
