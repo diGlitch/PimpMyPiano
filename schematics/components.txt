@@ -1,0 +1,11 @@
+Main Components:
+Fatar TP44GH
+ST NUCLEO-F411RE
+2x Shift Register SN74HC595N
+Resistor
+Resistor
+Resistor
+
+Others
+DIN 5 Pin MIDI Socket
+
