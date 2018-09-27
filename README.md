@@ -3,12 +3,12 @@
 ---------------------------------------------------------------------------------------------------
 Some day the controller board of my StudioLogic SL990Pro stopped working. Instead of buying a whhole new masterkeybard I though "why not building one my self and reusing the high quality Fata TP44GH keybed in there". What had to be done was to read out the double button matrix (two buttons/sensors for each note), meassuring the time between two button presses and convert this data into midi commands after about a year I ended up with a Mbed based interface between a Fatar TP44GH keybed and the midi world.
 
-## How to make it work
+## How to make it work || Underconstruction
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 There are two parts: The software and the hardware.
 
-### Prerequisites
+### Prerequisites || Underconstruction
 What things you need to install the software and how to install them
 
 You will need ...:
@@ -17,9 +17,10 @@ You will need ...:
 * software that runs on the Nucleo. You can find the [PlatformIO](http://platformio.org) project in the src folder. Just clone the repo or download scr folder as ZIP and open "PimpMyPiano" folder in platformIO
 
 ## Build With
-* Software is made on the basis of [MBED OS](https://www.mbed.com/en/platform/mbed-os/)
+* [MBED OS](https://www.mbed.com/en/platform/mbed-os/)
+* [PlatformIO](http://platformio.org) extension for [VSCode](https://code.visualstudio.com/)
 
-## Contributing
+## Contributing || Underconstruction
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## What is there to improve
@@ -32,5 +33,5 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
-* Francois Best's MIDI Library for Arduino ported by Hiroshi Suga
-* YoongHM's mbed shift register library
+* Francois Best's Mbed MIDI Library for Arduino ported by Hiroshi Suga
+* YoongHM's Mbed shift register library
