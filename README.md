@@ -14,7 +14,7 @@ What things you need to install the software and how to install them
 You will need ...:
 * an ARM MBED ready board. I used the [NUCLEO-F411RE](https://os.mbed.com/platforms/ST-Nucleo-F411RE/) from ST. I guess the 100Mhz are a bit overkill so assume that something slower with similar pinout would do.
 * hardware that connects the Nucleo with the Button Matrix of the piano. See Hardware folder for schematic and other hardware related details such as a part list.
-* software that runs on the Nucleo. You can find the [PlatformIO](http://platformio.org) project in the src folder. Or in the [MBed Git](https://os.mbed.com/users/diglitch/code/PimpMyPiano/) which I will most likely discontinue.
+* software that runs on the Nucleo. You can find the [PlatformIO](http://platformio.org) project in the src folder. Just clone the repo or download scr folder as ZIP and open "PimpMyPiano" folder in platformIO
 
 ## Build With
 * Software is made on the basis of [MBED OS](https://www.mbed.com/en/platform/mbed-os/)
