@@ -34,3 +34,4 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 ## Acknowledgments
 * Francois Best's Mbed MIDI Library for Arduino ported by Hiroshi Suga
 * YoongHM's Mbed shift register library
+* Processing for the mapping formular 
