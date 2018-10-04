@@ -4,60 +4,60 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, Button, RadioButtons
 
+sa = 4
+sap = 0.25
+sb = 0
+sc = 0.22
+sd = 0
 
 def map(x, f, t, minLim, maxLim):
     return (t + (f - t) * ((x - minLim) / (maxLim - minLim)));
 	
+def bezier(x, a, b, c, d, ap):
+    c1 = np.multiply(np.power(1-x,ap), a)
+    c2 = np.multiply(np.multiply(np.multiply(np.power(1-x,2), 3), b), x)
+    c3 = np.multiply(np.multiply(np.multiply(1-x, np.power(x,2)), c), 3)
+    c4 = np.multiply(np.power(x,3), d)
+    sum = c1 + c2 + c3 + c4
+    return map(sum, 0, 127, np.min(sum), np.max(sum))
+
 MAX_DURATION = 300
 MIN_DURATION = 3	
 times = np.arange(MIN_DURATION, MAX_DURATION+1)
 x = map(times, 0, 1, MIN_DURATION, MAX_DURATION)
 
-fig, ax = plt.subplots(5, 1,  gridspec_kw = {'height_ratios':[20, 2, 2, 2, 2]}, sharex=True, sharey=True)
-#plt.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=None, hspace=0.5)
+fig, ax = plt.subplots(6, 1,  gridspec_kw = {'height_ratios':[20, 2, 2, 2, 2, 2]}, sharex=False, sharey=False)
 fig.tight_layout()
 ax = ax.flatten()
 ax[0].set_xlabel('Duration in ms')
 ax[0].set_ylabel('Velocity')
 plt.subplots_adjust(left=0.1, right=0.90)
 
-t = times
-a0 = 5
-f0 = 3
-s = np.multiply(np.power(1-x,3), 2)
-#l, = plt.plot(t, s, lw=2, color='red')
-ax[0].plot(t, x, lw=2, color='red')
-ax[0].axis([MIN_DURATION, MAX_DURATION, 0, 128]) # Axis
+s = np.multiply(np.power(x,1), 1)
+sv = map(s, 0, 127, np.min(s), np.max(s))
 
-axcolor = 'lightgoldenrodyellow'
-#ax[1] = plt.axes([0.1, 0.15, 0.80, 0.03], facecolor=axcolor)
-#axb = plt.axes([0.1, 0.1, 0.80, 0.03], facecolor=axcolor)
-#axc = plt.axes([0.1, 0.05, 0.80, 0.03], facecolor=axcolor)
-#axd = plt.axes([0.1, 0.01, 0.80, 0.03], facecolor=axcolor)
+ax[0].plot(times,bezier(x,sa,sb,sc,sd,sap) , lw=2, color='red') # Inital Plot
+#ax[0].axis([MIN_DURATION, MAX_DURATION, 0, 128]) # Axis
 
-sa = Slider(ax[1], 'a', 0, 1, valinit=0)
-sb = Slider(ax[2], 'b', 0, 1, valinit=1)
-sc = Slider(ax[3], 'c', 0, 1, valinit=0)
-sd = Slider(ax[4], 'd', 0, 1, valinit=1)
+sas = Slider(ax[1], 'a', 0.01, 4, valinit=sa)
+sbs = Slider(ax[2], 'b', 0.01, 1, valinit=sb)
+scs = Slider(ax[3], 'c', 0.01, 1, valinit=sc)
+sds = Slider(ax[4], 'd', 0.01, 1, valinit=sd)
+saps = Slider(ax[5], 'power a', 0.01, 1, valinit=sap)
 
 def update(val):
-    a = sa.val # Pull Values from silders
-    b = sb.val
-    c = sc.val
-    d = sd.val
-    c1 = np.multiply(np.power(1-x,3), a)
-    c2 = np.multiply(np.multiply(np.multiply(np.power(1-x,2), 3), b), x)
-    c3 = np.multiply(np.multiply(np.multiply(1-x, np.power(x,2)), c), 3)
-    c4 = np.multiply(np.power(x,3), d)
-    sum = c1 + c2 + c3 + c4
-    ax[0].set_ydata(map(sum, 0, 127, np.max(sum), np.min(sum))) ## Formula here
+    ax[0].clear() #clear plot, slow
+    ax[0].plot(times,bezier(x,sas.val,sbs.val,scs.val,sds.val,saps.val) , lw=2, color='red')
+    ax[0].set_xlabel('Duration in ms')
+    ax[0].set_ylabel('Velocity')
     fig.canvas.draw_idle()
 
 # Event handler
-sa.on_changed(update)
-sb.on_changed(update)
-sc.on_changed(update)
-sd.on_changed(update)
+sas.on_changed(update)
+sbs.on_changed(update)
+scs.on_changed(update)
+sds.on_changed(update)
+saps.on_changed(update)
 
 #Reset Button
 #resetax = plt.axes([0.8, 0.025, 0.1, 0.04])
