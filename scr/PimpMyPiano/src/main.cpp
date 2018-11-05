@@ -30,7 +30,7 @@ Serial pc(USBTX, USBRX); // tx, rx
 InterruptIn btn(USER_BUTTON);
 DigitalOut led(LED1);
 
-ShiftReg   HC595(PB_10, PA_8, PA_9);
+ShiftReg   HC595(PA_9, PA_8, PB_10);
 int regCounter = 0;
 
 DigitalIn tl_1(PC_10);
