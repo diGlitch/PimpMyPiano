@@ -7,49 +7,54 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
 import javafx.stage.Stage;
 
-import java.awt.geom.AffineTransform;
 import java.awt.geom.CubicCurve2D;
-import java.awt.geom.PathIterator;
 
 /** Example of how a cubic curve works, drag the anchors around to change the curve. */
 public class CubicCurveManipulator extends Application {
     public static void main(String[] args) throws Exception { launch(args); }
+
     @Override public void start(final Stage stage) throws Exception {
         CubicCurve curve = createStartingCurve();
+        System.out.println(curve.getFill());
 
-        Line controlLine1 = new BoundLine(curve.controlX1Property(), curve.controlY1Property(), curve.startXProperty(), curve.startYProperty());
-        Line controlLine2 = new BoundLine(curve.controlX2Property(), curve.controlY2Property(), curve.endXProperty(),   curve.endYProperty());
+        Line controlLine1 = new BoundLine(
+                curve.controlX1Property(), curve.controlY1Property(),
+                curve.startXProperty(), curve.startYProperty());
+        Line controlLine2 = new BoundLine(
+                curve.controlX2Property(), curve.controlY2Property(),
+                curve.endXProperty(), curve.endYProperty());
 
-        Anchor start    = new Anchor(Color.PALEGREEN, curve.startXProperty(),    curve.startYProperty());
+        //Anchor start    = new Anchor(Color.PALEGREEN, curve.startXProperty(),    curve.startYProperty());
         Anchor control1 = new Anchor(Color.GOLD,      curve.controlX1Property(), curve.controlY1Property());
         Anchor control2 = new Anchor(Color.GOLDENROD, curve.controlX2Property(), curve.controlY2Property());
-        Anchor end      = new Anchor(Color.TOMATO,    curve.endXProperty(),      curve.endYProperty());
+        //Anchor end      = new Anchor(Color.TOMATO,    curve.endXProperty(),      curve.endYProperty());
 
+        /**
         // TODO: GET DATA FROM CURVE
         CubicCurve2D curve2 = new CubicCurve2D.Double(
                 start.getCenterX(), start.getCenterY(),
                 control1.getCenterX(), control1.getCenterY(),
                 control2.getCenterX(), control2.getCenterY(),
                 end.getCenterX(), end.getLayoutY());
-
-        
-
+         **/
 
         stage.setTitle("Cubic Curve Manipulation Sample");
-        stage.setScene(new Scene(new Group(controlLine1, controlLine2, curve, start, control1, control2, end), 400, 400, Color.ALICEBLUE));
+        stage.setScene(new Scene(new Group(controlLine1, controlLine2, curve, control1, control2), 400, 400, Color.ALICEBLUE));
         stage.show();
     }
 
     private CubicCurve createStartingCurve() {
         CubicCurve curve = new CubicCurve();
-        curve.setStartX(100);
-        curve.setStartY(100);
-        curve.setControlX1(150);
-        curve.setControlY1(50);
-        curve.setControlX2(250);
-        curve.setControlY2(150);
-        curve.setEndX(300);
-        curve.setEndY(100);
+
+        curve.setStartX(0);
+        curve.setStartY(400);
+        curve.setControlX1(50);
+        curve.setControlY1(200);
+        curve.setControlX2(350);
+        curve.setControlY2(200);
+        curve.setEndX(400);
+        curve.setEndY(0);
+
         curve.setStroke(Color.FORESTGREEN);
         curve.setStrokeWidth(4);
         curve.setStrokeLineCap(StrokeLineCap.ROUND);

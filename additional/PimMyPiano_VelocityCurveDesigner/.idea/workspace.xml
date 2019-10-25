@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e8fcf05-0d74-4e4c-b5d1-4a6bbaff8a9a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../veloCurveDesigner_python/PyQtPlayground.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../veloCurveDesigner_python/PyQtPlayground2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scr/PimpMyPiano/.vscode/extensions.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../scr/PimpMyPiano/.vscode/extensions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scr/PimpMyPiano/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../scr/PimpMyPiano/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scr/PimpMyPiano/platformio.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../../scr/PimpMyPiano/platformio.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PimMyPiano_VelocityCurveDesigner/CubicCurveManipulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PimMyPiano_VelocityCurveDesigner/CubicCurveManipulator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CubicCurveManipulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CubicCurveManipulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../veloCurveDesigner_python/PIMP MY PIANO VelocityDev.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../veloCurveDesigner_python/PIMP MY PIANO VelocityDev.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,6 +88,7 @@
       <workItem from="1543412380794" duration="2000" />
       <workItem from="1545483503174" duration="624000" />
       <workItem from="1568410089168" duration="1217000" />
+      <workItem from="1572023567617" duration="2951000" />
     </task>
     <servers />
   </component>
@@ -98,7 +100,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
