@@ -2,5 +2,9 @@
     "terminal.integrated.env.windows": {
         "PATH": "C:\\Users\\diGlitch\\.platformio\\penv\\Scripts;C:\\Users\\diGlitch\\.platformio\\penv;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Crucial\\Crucial Storage Executive;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\STMicroelectronics\\STM32 ST-LINK Utility\\ST-LINK Utility;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Users\\diGlitch\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\diGlitch\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Crucial\\Crucial Storage Executive;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\STMicroelectronics\\STM32 ST-LINK Utility\\ST-LINK Utility;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Users\\diGlitch\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\diGlitch\\AppData\\Local\\Programs\\Microsoft VS Code\\bin",
         "PLATFORMIO_CALLER": "vscode"
+    },
+    "terminal.integrated.env.linux": {
+        "PATH": "/home/diglitch/.platformio/penv/bin:/home/diglitch/.platformio/penv:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+        "PLATFORMIO_CALLER": "vscode"
     }
 }
