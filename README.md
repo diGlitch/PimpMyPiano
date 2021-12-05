@@ -1,7 +1,7 @@
 # PimpMyPiano
 ## Mbed based interface between Fatar TP44GH keybed and the midi world
 ---------------------------------------------------------------------------------------------------
-Some day the controller board of my StudioLogic SL990Pro stopped working. Instead of buying a whhole new masterkeybard I though "why not building one my self and reusing the high quality Fata TP44GH keybed in there". What had to be done was to read out the double button matrix (two buttons/sensors for each note), meassuring the time between two button presses and convert this data into midi commands after about a year I ended up with a Mbed based interface between a Fatar TP44GH keybed and the midi world.
+Some day the controller board of my StudioLogic SL990Pro stopped working. Instead of buying a whole new masterkeybard I though "why not building one my self and reusing the high quality Fata TP44GH keybed in there". What had to be done was to read out the double button matrix (two buttons/sensors for each note), meassuring the time between two button presses and convert this data into midi commands after about a year I ended up with a Mbed based interface between a Fatar TP44GH keybed and the midi world.
 
 ## How to make it work || Underconstruction
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
